@@ -1,7 +1,23 @@
-#  Spring Native, GraalVM, and Fabric8
-
- 
-Check out the [blog detailing how to use this](https://joshlong.com/jl/blogPost/fabric8-and-spring-native.html)
+# Bootiful Kubernetes Operators 
 
 
-This code was based off the excellent blog and work [of Rohan Kumar](https://itnext.io/writing-kubernetes-sample-controller-in-java-c8edc38f348f) - thank you!
+Make sure youre in the `default` namespace of a Kubernetes cluster. Not sure fi this matters but I am, so it might help.
+
+Then, apply the config in the `k8s` directory:
+
+```shell 
+kubectl apply -f k8s/crd.yaml
+``` 
+
+then start the application:  
+
+```shell
+mvn clean spring-boot:run
+``` 
+
+Then deploy an isntance of the new CRD: 
+
+```shell 
+Kubect apply -f k8s/
+```
+
