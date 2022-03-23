@@ -21,3 +21,18 @@ Then deploy an isntance of the new CRD:
 Kubect apply -f k8s/
 ```
 
+
+if you want to get a native binary that you can run with very low memory, do: 
+
+
+```shell 
+mvn -Pnative clean package
+```
+
+if you want to get a Docker image containing the native binary, do: 
+
+
+```shell 
+mvn clean package spring-boot:build-image 
+```
+
