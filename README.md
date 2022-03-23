@@ -26,13 +26,13 @@ if you want to get a native binary that you can run with very low memory, do:
 
 
 ```shell 
-mvn -Pnative clean package
+mvn -Pnative -DskipTests clean package
 ```
 
 if you want to get a Docker image containing the native binary, do: 
 
 
 ```shell 
-mvn clean package spring-boot:build-image 
+mvn -DskipTests clean package spring-boot:build-image 
 ```
 
